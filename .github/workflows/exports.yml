@@ -4,16 +4,14 @@ on:
   workflow_dispatch:
   push:
     paths:
-    - "pcb/*.kicad_sch"
-    - "pcb/*.kicad_pcb"
-    - "pcb/*.kicad_pro"
-    - "**/*kibot.yml"
+    - "pcb/**"
+    - ".kibot/**"
+    - "kibot.yml"
   pull_request:
     paths:
-    - "pcb/*.kicad_sch"
-    - "pcb/*.kicad_pcb"
-    - "pcb/*.kicad_pro"
-    - "**/*kibot.yml"
+    - "pcb/**"
+    - ".kibot/**"
+    - "kibot.yml"
 
 permissions:
   contents: read
