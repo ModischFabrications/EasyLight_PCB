@@ -1,0 +1,48 @@
+name: KiCad Exports
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+    - "pcb/*.kicad_sch"
+    - "pcb/*.kicad_pcb"
+    - "pcb/*.kicad_pro"
+    - "**/*kibot.yml"
+  pull_request:
+    paths:
+    - "pcb/*.kicad_sch"
+    - "pcb/*.kicad_pcb"
+    - "pcb/*.kicad_pro"
+    - "**/*kibot.yml"
+
+permissions:
+  contents: read
+
+concurrency: ci-${{ github.ref }}
+
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    
+    steps:
+    - uses: actions/checkout@v2
+    
+    # https://github.com/INTI-CMNB/KiBot/#usage-of-github-actions
+    - name: render KiCad exports
+      uses: INTI-CMNB/KiBot@v2
+      with:
+        config: kibot.yaml
+      # optional - prefix to output defined in config
+        dir: output
+      # optional - schematic file
+        schema: 'PCB/*.sch'
+      # optional - PCB design file
+        board: 'PCB/*.kicad_pcb'
+        
+    - name: upload results
+      uses: actions/upload-artifact@v2
+      with:
+        name: output
+        path: output
+            
