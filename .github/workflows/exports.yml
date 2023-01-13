@@ -4,12 +4,12 @@ on:
   workflow_dispatch:
   push:
     paths:
-    - "pcb/**"
+    - "PCB/**"
     - ".kibot/**"
     - "kibot.yml"
   pull_request:
     paths:
-    - "pcb/**"
+    - "PCB/**"
     - ".kibot/**"
     - "kibot.yml"
 
