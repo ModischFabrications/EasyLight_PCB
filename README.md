@@ -67,13 +67,16 @@ Input ESD & Overvoltage *should* be handled by a TVS diode.
 
 Reverse Polarity protection: **TODO**
 - https://electronics.stackexchange.com/questions/497973/reverse-polarity-protection-circuit-with-p-mosfet-and-zener
-- 
 
 
 ## Part Selection
 Everything is optimized for JLCPCB, because they are great for (cheap) hobby projects. 
-[JLCParts](https://yaqwsx.github.io/jlcparts/#/) was used to find parts. 
+[JLCPCB Search](https://jlcpcb.com/parts/) was used for simple part lookup, usually with "basic parts".
+[LCSC Search](https://www.lcsc.com/) should show the same parts from the same databse, but doesn't add much. 
+[JLCParts](https://yaqwsx.github.io/jlcparts/#/) was used to find more complex parts. 
 [easyeda2kicad](https://github.com/uPesy/easyeda2kicad.py) to import parts into KiCAD. 
+
+Basic parts are given preference, because they are cheaper for assembly service. 
 
 Footprints: 
 - THT are dead, SMD is king
@@ -81,6 +84,10 @@ Footprints:
 - SOT-23-5, SOP-8, SMA and similar are good choices
 - 0603 or bigger
 -> Soldering by hand needs to be possible, even if reflow is easier
+
+Some footprints use minor variations (e.g. 1206 LED) that I already have, sorry for that. 
+
+Generic resistors and capacitors use the [E6 series](https://en.wikipedia.org/wiki/E_series_of_preferred_numbers) for best compatibility.
 
 ### Microcontroller
 Needs: 
