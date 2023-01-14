@@ -162,7 +162,7 @@ F 0 "U1" H 1221 4846 50  0000 R CNN
 F 1 "ATtiny85-20PU" H 1221 4755 50  0000 R CNN
 F 2 "Package_DIP:DIP-8_W7.62mm" H 1750 4800 50  0001 C CIN
 F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/atmel-2586-avr-8-bit-microcontroller-attiny25-attiny45-attiny85_datasheet.pdf" H 1750 4800 50  0001 C CNN
-F 4 "*" H 1750 4800 50  0001 C CNN "LCSC Part"
+F 4 "C965497" H 1750 4800 50  0001 C CNN "LCSC Part"
 	1    1750 4800
 	1    0    0    -1  
 $EndComp
@@ -912,12 +912,12 @@ Ignore [3] for SK6812, WS2812B
 $Comp
 L Connector:AVR-ISP-6 J4
 U 1 1 63F240FE
-P 6000 4750
-F 0 "J4" H 5671 4846 50  0000 R CNN
-F 1 "AVR-ISP" H 5671 4755 50  0000 R CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical" V 5750 4800 50  0001 C CNN
-F 3 " ~" H 4725 4200 50  0001 C CNN
-	1    6000 4750
+P 5950 4900
+F 0 "J4" H 5621 4996 50  0000 R CNN
+F 1 "AVR-ISP" H 5621 4905 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical" V 5700 4950 50  0001 C CNN
+F 3 " ~" H 4675 4350 50  0001 C CNN
+	1    5950 4900
 	1    0    0    -1  
 $EndComp
 Text Label 2350 5000 0    50   ~ 0
@@ -927,34 +927,34 @@ AREF
 $Comp
 L power:GND #PWR0109
 U 1 1 63F26206
-P 5900 5150
-F 0 "#PWR0109" H 5900 4900 50  0001 C CNN
-F 1 "GND" H 5905 4977 50  0000 C CNN
-F 2 "" H 5900 5150 50  0001 C CNN
-F 3 "" H 5900 5150 50  0001 C CNN
-	1    5900 5150
+P 5850 5300
+F 0 "#PWR0109" H 5850 5050 50  0001 C CNN
+F 1 "GND" H 5855 5127 50  0000 C CNN
+F 2 "" H 5850 5300 50  0001 C CNN
+F 3 "" H 5850 5300 50  0001 C CNN
+	1    5850 5300
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:VCC #PWR0110
 U 1 1 63F267A8
-P 5900 4250
-F 0 "#PWR0110" H 5900 4100 50  0001 C CNN
-F 1 "VCC" H 5915 4423 50  0000 C CNN
-F 2 "" H 5900 4250 50  0001 C CNN
-F 3 "" H 5900 4250 50  0001 C CNN
-	1    5900 4250
+P 5850 4400
+F 0 "#PWR0110" H 5850 4250 50  0001 C CNN
+F 1 "VCC" H 5865 4573 50  0000 C CNN
+F 2 "" H 5850 4400 50  0001 C CNN
+F 3 "" H 5850 4400 50  0001 C CNN
+	1    5850 4400
 	1    0    0    -1  
 $EndComp
-Text Notes 5000 3950 0    50   ~ 0
+Text Notes 4950 4100 0    50   ~ 0
 Turn off and disconnect LEDs while programming
-Text Label 6400 4850 0    50   ~ 0
+Text Label 6350 5000 0    50   ~ 0
 RESET
-Text Label 6400 4650 0    50   ~ 0
+Text Label 6350 4800 0    50   ~ 0
 AREF
-Text Label 6400 4750 0    50   ~ 0
+Text Label 6350 4900 0    50   ~ 0
 D_LEDS2
-Text Label 6400 4550 0    50   ~ 0
+Text Label 6350 4700 0    50   ~ 0
 D_LEDS
 Wire Wire Line
 	8400 4650 8500 4650
@@ -1166,7 +1166,7 @@ Wire Wire Line
 	2600 2000 2600 1750
 Wire Wire Line
 	2600 1450 2600 1250
-Text Notes 6250 5300 0    50   ~ 0
+Text Notes 6200 5450 0    50   ~ 0
 TODO: Check pins
 Text Notes 7650 6950 0    50   ~ 0
 TODO: rename
