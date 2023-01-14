@@ -63,10 +63,9 @@ Side note: Disposable vapes are a cancer to the environment, but have "free" LiP
 Short-circuit-resistance of the power leads is archieved using a polyfuse. 
 Battery safety is handled by a dedicated chip on the PCB (there is an additional one in most batteries). 
 
-Input ESD & Overvoltage *should* be handled by a TVS diode. 
+Input ESD & Overvoltage should be handled by the TVS diode. 
 
-Reverse Polarity protection: **TODO**
-- https://electronics.stackexchange.com/questions/497973/reverse-polarity-protection-circuit-with-p-mosfet-and-zener
+Reverse Polarity protection via P-FET according to [this great video](https://www.youtube.com/watch?v=IrB-FPcv1Dc&t=184s).
 
 
 ## Part Selection
