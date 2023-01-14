@@ -4,7 +4,7 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title "Voronoi Box"
+Title "EasyLight"
 Date ""
 Rev ""
 Comp "MPC"
@@ -1168,4 +1168,6 @@ Wire Wire Line
 	2600 1450 2600 1250
 Text Notes 6250 5300 0    50   ~ 0
 TODO: Check pins
+Text Notes 7650 6950 0    50   ~ 0
+TODO: rename
 $EndSCHEMATC

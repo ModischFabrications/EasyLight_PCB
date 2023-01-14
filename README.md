@@ -85,9 +85,10 @@ Footprints:
 - 0603 or bigger
 -> Soldering by hand needs to be possible, even if reflow is easier
 
-Some footprints use minor variations (e.g. 1206 LED) that I already have, sorry for that. 
-
 Generic resistors and capacitors use the [E6 series](https://en.wikipedia.org/wiki/E_series_of_preferred_numbers) for best compatibility.
+
+Some footprints use minor variations (e.g. 1206 LED) that I already have, sorry for that. 
+Others are based on availability and consistency, e.g. 22uF caps are the largest capacity I could get as a cheap basic part in 0603. 
 
 ### Microcontroller
 Needs: 
