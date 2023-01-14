@@ -31,12 +31,7 @@ jobs:
       uses: INTI-CMNB/KiBot@v2
       with:
         config: kibot.yaml
-      # optional - prefix to output defined in config
         dir: output
-      # optional - schematic file
-        schema: 'PCB/*.sch'
-      # optional - PCB design file
-        board: 'PCB/*.kicad_pcb'
         
     - name: upload results
       uses: actions/upload-artifact@v2
