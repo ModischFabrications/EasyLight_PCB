@@ -31,6 +31,8 @@ jobs:
       uses: INTI-CMNB/KiBot@v2
       with:
         config: kibot.yaml
+        schema: "PCB/easylight.sch"
+        board: "PCB/easylight.kicad_pcb"
         dir: output
         
     - name: upload results
