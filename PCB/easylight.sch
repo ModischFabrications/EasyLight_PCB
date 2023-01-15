@@ -239,7 +239,7 @@ P 10200 4450
 F 0 "U3" H 10200 3963 60  0000 C CNN
 F 1 "XB8089D0" H 10200 4069 60  0000 C CNN
 F 2 "lcsc:SOIC-8_L4.9-W3.9-P1.27-LS6.0-BL-EP3.3-1" H 10200 3950 60  0001 C CNN
-F 3 "" H 10200 4450 50  0001 C CNN
+F 3 "https://www.lcsc.com/product-detail/Battery-Management-ICs_XySemi-XB8089D0_C2760005.html" H 10200 4450 50  0001 C CNN
 F 4 "xysemi(赛芯微)" H 10200 4450 0   0001 C CNN "Manufacturer"
 F 5 "C2760005" H 10200 4450 0   0001 C CNN "LCSC Part"
 F 6 "Extended Part" H 10200 4450 0   0001 C CNN "JLC Part"
@@ -264,8 +264,6 @@ Wire Wire Line
 	9650 4250 9650 4450
 Text Notes 7050 3600 0    50   ~ 0
 Battery Protection (Optional)\n4.25 V -> 4.10 V | 2.90 V-> 3.0 V | 10.0 A
-Text Notes 7150 3850 0    50   ~ 0
-// How can it be good to have a resistor in series??
 Text Notes 8900 4950 0    50   ~ 0
 bridge -BATT to GND to bypass BMS
 $Comp

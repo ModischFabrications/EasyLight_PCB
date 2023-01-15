@@ -239,7 +239,7 @@ P 10200 4450
 F 0 "U3" H 10200 3963 60  0000 C CNN
 F 1 "XB8089D0" H 10200 4069 60  0000 C CNN
 F 2 "lcsc:SOIC-8_L4.9-W3.9-P1.27-LS6.0-BL-EP3.3-1" H 10200 3950 60  0001 C CNN
-F 3 "" H 10200 4450 50  0001 C CNN
+F 3 "https://www.lcsc.com/product-detail/Battery-Management-ICs_XySemi-XB8089D0_C2760005.html" H 10200 4450 50  0001 C CNN
 F 4 "xysemi(赛芯微)" H 10200 4450 0   0001 C CNN "Manufacturer"
 F 5 "C2760005" H 10200 4450 0   0001 C CNN "LCSC Part"
 F 6 "Extended Part" H 10200 4450 0   0001 C CNN "JLC Part"
@@ -513,7 +513,7 @@ L Jumper:SolderJumper_2_Bridged JP1
 U 1 1 63C53736
 P 5800 1550
 F 0 "JP1" V 5754 1618 50  0000 L CNN
-F 1 "Cut for NTC" V 5845 1618 50  0000 L CNN
+F 1 "Cut for TEMP" V 5845 1618 50  0000 L CNN
 F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm" H 5800 1550 50  0001 C CNN
 F 3 "~" H 5800 1550 50  0001 C CNN
 	1    5800 1550
