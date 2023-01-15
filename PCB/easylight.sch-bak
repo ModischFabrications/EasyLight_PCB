@@ -14,25 +14,14 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L MF_custom:MF_Logo L1
-U 1 1 63B4B140
-P 8500 6050
-F 0 "L1" H 8500 6050 50  0001 C CNN
-F 1 "MF_Logo" H 8578 6150 50  0000 L CNN
-F 2 "MF custom:mf_logo_10mm" H 8500 6050 50  0001 C CNN
-F 3 "" H 8500 6050 50  0001 C CNN
-	1    8500 6050
-	1    0    0    -1  
-$EndComp
-$Comp
 L Mechanical:MountingHole H1
 U 1 1 63B4B95E
-P 7450 5750
-F 0 "H1" H 7550 5796 50  0000 L CNN
-F 1 "MountingHole" H 7550 5705 50  0000 L CNN
-F 2 "MountingHole:MountingHole_3.2mm_M3_Pad" H 7450 5750 50  0001 C CNN
-F 3 "~" H 7450 5750 50  0001 C CNN
-	1    7450 5750
+P 7700 5850
+F 0 "H1" H 7800 5896 50  0000 L CNN
+F 1 "MountingHole" H 7800 5805 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_Pad" H 7700 5850 50  0001 C CNN
+F 3 "~" H 7700 5850 50  0001 C CNN
+	1    7700 5850
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -68,16 +57,16 @@ Microcontroller
 $Comp
 L power:VCC #PWR0102
 U 1 1 63B57B41
-P 10000 1400
-F 0 "#PWR0102" H 10000 1250 50  0001 C CNN
-F 1 "VCC" H 10015 1573 50  0000 C CNN
-F 2 "" H 10000 1400 50  0001 C CNN
-F 3 "" H 10000 1400 50  0001 C CNN
-	1    10000 1400
+P 10350 1400
+F 0 "#PWR0102" H 10350 1250 50  0001 C CNN
+F 1 "VCC" H 10365 1573 50  0000 C CNN
+F 2 "" H 10350 1400 50  0001 C CNN
+F 3 "" H 10350 1400 50  0001 C CNN
+	1    10350 1400
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	10000 2300 9800 2300
+	10350 2400 10000 2400
 $Comp
 L power:VBUS #PWR0103
 U 1 1 63B5891A
@@ -191,12 +180,12 @@ $EndComp
 $Comp
 L Mechanical:MountingHole H2
 U 1 1 63BC69A3
-P 7450 6000
-F 0 "H2" H 7550 6046 50  0000 L CNN
-F 1 "MountingHole" H 7550 5955 50  0000 L CNN
-F 2 "MountingHole:MountingHole_3.2mm_M3_Pad" H 7450 6000 50  0001 C CNN
-F 3 "~" H 7450 6000 50  0001 C CNN
-	1    7450 6000
+P 7700 6100
+F 0 "H2" H 7800 6146 50  0000 L CNN
+F 1 "MountingHole" H 7800 6055 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_Pad" H 7700 6100 50  0001 C CNN
+F 3 "~" H 7700 6100 50  0001 C CNN
+	1    7700 6100
 	1    0    0    -1  
 $EndComp
 Text Label 2350 4800 0    50   ~ 0
@@ -204,9 +193,7 @@ D_switches
 Wire Wire Line
 	2600 4500 2350 4500
 Text Notes 1100 2750 0    50   ~ 0
-Reverse polarity protection: Q2 \nShort circuit protection: F1\nESD: D1
-Text Notes 8600 6250 0    50   ~ 0
-TODO: MPC Logo
+Reverse polarity protection: Q2 \nShort circuit protection: F1\nESD protection: D1
 Wire Wire Line
 	2500 5000 2350 5000
 Wire Wire Line
@@ -231,17 +218,6 @@ F 1 "GND" H 4055 4277 50  0000 C CNN
 F 2 "" H 4050 4450 50  0001 C CNN
 F 3 "" H 4050 4450 50  0001 C CNN
 	1    4050 4450
-	1    0    0    -1  
-$EndComp
-$Comp
-L Switch:SW_DIP_x01 SW0
-U 1 1 63B4E7AA
-P 9500 2300
-F 0 "SW0" H 9500 2567 50  0000 C CNN
-F 1 "SW_ON/OFF" H 9500 2476 50  0000 C CNN
-F 2 "" H 9500 2300 50  0001 C CNN
-F 3 "~" H 9500 2300 50  0001 C CNN
-	1    9500 2300
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -290,8 +266,8 @@ Text Notes 7050 3600 0    50   ~ 0
 Battery Protection (Optional)\n4.25 V -> 4.10 V | 2.90 V-> 3.0 V | 10.0 A
 Text Notes 7150 3850 0    50   ~ 0
 // How can it be good to have a resistor in series??
-Text Notes 8850 5300 0    50   ~ 0
-bridge to bypass BMS
+Text Notes 8900 4950 0    50   ~ 0
+bridge -BATT to GND to bypass BMS
 $Comp
 L LCSC:AO3415_C181094 Q1
 U 1 1 63C09959
@@ -309,12 +285,12 @@ $EndComp
 $Comp
 L power:GND #PWR013
 U 1 1 63C45FD2
-P 10600 5050
-F 0 "#PWR013" H 10600 4800 50  0001 C CNN
-F 1 "GND" H 10605 4877 50  0000 C CNN
-F 2 "" H 10600 5050 50  0001 C CNN
-F 3 "" H 10600 5050 50  0001 C CNN
-	1    10600 5050
+P 10600 4800
+F 0 "#PWR013" H 10600 4550 50  0001 C CNN
+F 1 "GND" H 10605 4627 50  0000 C CNN
+F 2 "" H 10600 4800 50  0001 C CNN
+F 3 "" H 10600 4800 50  0001 C CNN
+	1    10600 4800
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -403,26 +379,13 @@ Wire Wire Line
 Wire Wire Line
 	1150 1650 1150 2000
 Wire Wire Line
-	8950 2300 9200 2300
-Text Notes 2800 6950 0    50   ~ 0
+	8950 2300 9400 2300
+Text Notes 2100 7000 0    50   ~ 0
 ...
 Wire Wire Line
 	1150 1200 1250 1200
-Text Notes 7450 700  0    50   ~ 0
+Text Notes 7600 1000 0    50   ~ 0
 Load Sharing/Power Path
-$Comp
-L Connector_Generic:Conn_01x02 J1
-U 1 1 63B7CAB7
-P 8200 4550
-F 0 "J1" H 8308 4731 50  0000 C CNN
-F 1 "LiPo (1S/3.7V)" H 8308 4640 50  0000 C CNN
-F 2 "Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical" H 8200 4550 50  0001 C CNN
-F 3 "~" H 8200 4550 50  0001 C CNN
-	1    8200 4550
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	8400 4350 8400 4550
 $Comp
 L power:+BATT #PWR012
 U 1 1 63D455C0
@@ -598,12 +561,12 @@ R_ISET = 540 / I_OUT\n10.8k (50mA) .. 675(800mA)\n2.2k -> 250mA
 $Comp
 L Device:LED D2
 U 1 1 63C31312
-P 1250 7100
-F 0 "D2" V 1289 6982 50  0000 R CNN
-F 1 "LED" V 1198 6982 50  0000 R CNN
-F 2 "LED_SMD:LED_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 1250 7100 50  0001 C CNN
-F 3 "~" H 1250 7100 50  0001 C CNN
-	1    1250 7100
+P 950 6550
+F 0 "D2" V 989 6432 50  0000 R CNN
+F 1 "CHARGING" V 898 6432 50  0000 R CNN
+F 2 "LED_SMD:LED_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 950 6550 50  0001 C CNN
+F 3 "~" H 950 6550 50  0001 C CNN
+	1    950  6550
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
@@ -689,8 +652,6 @@ F 5 "Basic Part" H 3450 1650 50  0001 C CNN "JLC Part"
 $EndComp
 Wire Wire Line
 	3450 1500 3450 1200
-Wire Wire Line
-	9150 4700 9150 4650
 Connection ~ 2500 1200
 Text Notes 4750 1700 0    50   ~ 0
 Low while charging\nUse LED or PB4
@@ -703,154 +664,35 @@ Wire Notes Line
 Wire Notes Line
 	500  3700 7000 3700
 Wire Wire Line
-	10000 1400 10000 2300
+	10350 1400 10350 2400
 Text Label 5250 1400 0    50   ~ 0
 CHRG
-$Comp
-L power:VCC #PWR0104
-U 1 1 63E9C419
-P 1250 6650
-F 0 "#PWR0104" H 1250 6500 50  0001 C CNN
-F 1 "VCC" H 1265 6823 50  0000 C CNN
-F 2 "" H 1250 6650 50  0001 C CNN
-F 3 "" H 1250 6650 50  0001 C CNN
-	1    1250 6650
-	1    0    0    -1  
-$EndComp
-Text Label 1250 7450 0    50   ~ 0
+Text Label 950  7450 0    50   ~ 0
 CHRG
-Wire Wire Line
-	1250 7250 1250 7450
 Text Label 2350 4600 0    50   ~ 0
 D_LEDS
 Text Label 2350 4700 0    50   ~ 0
 D_LEDS2
-Text Label 3200 4750 0    50   ~ 0
-CHRG
-Text Notes 800  6300 0    50   ~ 0
+Text Notes 1150 6100 0    50   ~ 0
 Charging Indicator LED (Optional)
-Text Label 4000 6500 0    50   ~ 0
+Text Label 4050 6300 0    50   ~ 0
 D_switches
-$Comp
-L Switch:SW_Push SW1
-U 1 1 63EDF8D1
-P 3000 7000
-F 0 "SW1" H 3000 7285 50  0000 C CNN
-F 1 "SW_1" H 3000 7194 50  0000 C CNN
-F 2 "Button_Switch_THT:SW_PUSH_6mm_H4.3mm" H 3000 7200 50  0001 C CNN
-F 3 "~" H 3000 7200 50  0001 C CNN
-	1    3000 7000
-	0    -1   -1   0   
-$EndComp
-$Comp
-L power:GND #PWR0106
-U 1 1 63EE0EAF
-P 4000 7200
-F 0 "#PWR0106" H 4000 6950 50  0001 C CNN
-F 1 "GND" H 4005 7027 50  0000 C CNN
-F 2 "" H 4000 7200 50  0001 C CNN
-F 3 "" H 4000 7200 50  0001 C CNN
-	1    4000 7200
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R11
-U 1 1 63EE1AA1
-P 3000 6650
-F 0 "R11" V 2793 6650 50  0000 C CNN
-F 1 "1k" V 2884 6650 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 2930 6650 50  0001 C CNN
-F 3 "~" H 3000 6650 50  0001 C CNN
-F 4 "C21190" H 3000 6650 50  0001 C CNN "LCSC Part"
-F 5 "Basic Part" H 3000 6650 50  0001 C CNN "JLC Part"
-	1    3000 6650
-	1    0    0    -1  
-$EndComp
-$Comp
-L Switch:SW_Push SW3
-U 1 1 63EE673E
-P 3800 7000
-F 0 "SW3" H 3800 7285 50  0000 C CNN
-F 1 "SW_3" H 3800 7194 50  0000 C CNN
-F 2 "Button_Switch_THT:SW_PUSH_6mm_H4.3mm" H 3800 7200 50  0001 C CNN
-F 3 "~" H 3800 7200 50  0001 C CNN
-	1    3800 7000
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:R R13
-U 1 1 63EE6744
-P 3800 6650
-F 0 "R13" V 3593 6650 50  0000 C CNN
-F 1 "4.7k" V 3684 6650 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 3730 6650 50  0001 C CNN
-F 3 "~" H 3800 6650 50  0001 C CNN
-F 4 "C23162" H 3800 6650 50  0001 C CNN "LCSC Part"
-F 5 "Basic Part" H 3800 6650 50  0001 C CNN "JLC Part"
-	1    3800 6650
-	1    0    0    -1  
-$EndComp
-$Comp
-L Switch:SW_Push SW2
-U 1 1 63EE87F2
-P 3400 7000
-F 0 "SW2" H 3400 7285 50  0000 C CNN
-F 1 "SW_2" H 3400 7194 50  0000 C CNN
-F 2 "Button_Switch_THT:SW_PUSH_6mm_H4.3mm" H 3400 7200 50  0001 C CNN
-F 3 "~" H 3400 7200 50  0001 C CNN
-	1    3400 7000
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:R R12
-U 1 1 63EE87F8
-P 3400 6650
-F 0 "R12" V 3193 6650 50  0000 C CNN
-F 1 "2.2k" V 3284 6650 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 3330 6650 50  0001 C CNN
-F 3 "~" H 3400 6650 50  0001 C CNN
-F 4 "C4190" H 3400 6650 50  0001 C CNN "LCSC Part"
-F 5 "Basic Part" H 3400 6650 50  0001 C CNN "JLC Part"
-	1    3400 6650
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4000 6500 3800 6500
-Connection ~ 3400 6500
-Wire Wire Line
-	3400 6500 3000 6500
-Connection ~ 3800 6500
-Wire Wire Line
-	3800 6500 3400 6500
-Wire Wire Line
-	4000 7200 3800 7200
-Connection ~ 3400 7200
-Wire Wire Line
-	3400 7200 3000 7200
-Connection ~ 3800 7200
-Wire Wire Line
-	3800 7200 3400 7200
-Text Notes 3750 6300 0    50   ~ 0
+Text Notes 3650 6150 0    50   ~ 0
 Internal Pullup 20..50k
 $Comp
 L Device:C C6
 U 1 1 63EF297F
-P 4000 6850
-F 0 "C6" H 4115 6896 50  0000 L CNN
-F 1 "100nF" H 4115 6805 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 4038 6700 50  0001 C CNN
-F 3 "~" H 4000 6850 50  0001 C CNN
-F 4 "C14663" H 4000 6850 50  0001 C CNN "LCSC Part"
-F 5 "Basic Part" H 4000 6850 50  0001 C CNN "JLC Part"
-	1    4000 6850
+P 4050 6950
+F 0 "C6" H 4165 6996 50  0000 L CNN
+F 1 "100nF" H 4165 6905 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 4088 6800 50  0001 C CNN
+F 3 "~" H 4050 6950 50  0001 C CNN
+F 4 "C14663" H 4050 6950 50  0001 C CNN "LCSC Part"
+F 5 "Basic Part" H 4050 6950 50  0001 C CNN "JLC Part"
+	1    4050 6950
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	4000 6700 4000 6500
-Wire Wire Line
-	4000 7000 4000 7200
-Connection ~ 4000 7200
-Text Label 5750 7000 2    50   ~ 0
+Text Label 5300 7000 2    50   ~ 0
 D_LEDS2
 $Comp
 L Connector_Generic:Conn_01x04 J3
@@ -885,7 +727,7 @@ F 3 "" H 5750 7100 50  0001 C CNN
 	1    5750 7100
 	1    0    0    -1  
 $EndComp
-Text Label 5750 6900 2    50   ~ 0
+Text Label 5300 6900 2    50   ~ 0
 D_LEDS
 Text Notes 5400 6450 0    50   ~ 0
 Ignore [3] for SK6812, WS2812B
@@ -979,26 +821,26 @@ $EndComp
 $Comp
 L power:PWR_FLAG #FLG0103
 U 1 1 63F39B59
-P 10000 1400
-F 0 "#FLG0103" H 10000 1475 50  0001 C CNN
-F 1 "PWR_FLAG" V 10000 1528 50  0001 L CNN
-F 2 "" H 10000 1400 50  0001 C CNN
-F 3 "~" H 10000 1400 50  0001 C CNN
-	1    10000 1400
+P 10350 1400
+F 0 "#FLG0103" H 10350 1475 50  0001 C CNN
+F 1 "PWR_FLAG" V 10350 1528 50  0001 L CNN
+F 2 "" H 10350 1400 50  0001 C CNN
+F 3 "~" H 10350 1400 50  0001 C CNN
+	1    10350 1400
 	0    1    1    0   
 $EndComp
-Connection ~ 10000 1400
+Connection ~ 10350 1400
 $Comp
 L Device:R R3
 U 1 1 63C36A56
-P 1250 6800
-F 0 "R3" V 1043 6800 50  0000 C CNN
-F 1 "1.5k" V 1134 6800 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 1180 6800 50  0001 C CNN
-F 3 "~" H 1250 6800 50  0001 C CNN
-F 4 "C22843" H 1250 6800 50  0001 C CNN "LCSC Part"
-F 5 "Basic Part" H 1250 6800 50  0001 C CNN "JLC Part"
-	1    1250 6800
+P 950 7150
+F 0 "R3" V 743 7150 50  0000 C CNN
+F 1 "1.5k" V 834 7150 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 880 7150 50  0001 C CNN
+F 3 "~" H 950 7150 50  0001 C CNN
+F 4 "C22843" H 950 7150 50  0001 C CNN "LCSC Part"
+F 5 "Basic Part" H 950 7150 50  0001 C CNN "JLC Part"
+	1    950  7150
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
@@ -1011,8 +853,7 @@ Wire Wire Line
 	10600 4450 10600 4550
 Connection ~ 10600 4550
 Wire Wire Line
-	10600 4550 10600 5050
-Connection ~ 8400 4650
+	10600 4550 10600 4800
 $Comp
 L power:-BATT #PWR0101
 U 1 1 63D9628E
@@ -1024,53 +865,6 @@ F 3 "" H 8400 4650 50  0001 C CNN
 	1    8400 4650
 	-1   0    0    1   
 $EndComp
-Connection ~ 10600 5050
-Wire Wire Line
-	9150 5000 9150 5050
-Wire Wire Line
-	9150 5050 10600 5050
-$Comp
-L Jumper:SolderJumper_2_Open JP2
-U 1 1 63C18EA6
-P 9150 4850
-F 0 "JP2" H 9150 5055 50  0000 C CNN
-F 1 "Join without BMS" H 9150 4964 50  0000 C CNN
-F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 9150 4850 50  0001 C CNN
-F 3 "~" H 9150 4850 50  0001 C CNN
-	1    9150 4850
-	0    1    1    0   
-$EndComp
-Text Notes 7450 5050 0    50   ~ 0
-TODO: Check polarity
-$Comp
-L Jumper:SolderJumper_2_Bridged JP3
-U 1 1 63F73305
-P 3050 4750
-F 0 "JP3" V 3004 4818 50  0000 L CNN
-F 1 "Cut for LED" V 3095 4818 50  0000 L CNN
-F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm" H 3050 4750 50  0001 C CNN
-F 3 "~" H 3050 4750 50  0001 C CNN
-	1    3050 4750
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:TestPoint TP2
-U 1 1 63F84996
-P 2900 4900
-F 0 "TP2" V 2854 5088 50  0000 L CNN
-F 1 "PB4" V 2945 5088 50  0000 L CNN
-F 2 "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm" H 3100 4900 50  0001 C CNN
-F 3 "~" H 3100 4900 50  0001 C CNN
-	1    2900 4900
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	2900 4900 2900 4750
-Wire Wire Line
-	2350 4900 2900 4900
-Connection ~ 2900 4900
-Text Notes 600  3300 0    50   ~ 0
-TODO: TVS?
 $Comp
 L Device:C C5
 U 1 1 63FA7F7E
@@ -1147,8 +941,6 @@ Wire Wire Line
 	2800 1450 2800 1200
 Text Notes 6200 5450 0    50   ~ 0
 TODO: Check pins
-Text Notes 7650 6950 0    50   ~ 0
-TODO: rename
 $Comp
 L LCSC:AO3415_C181094 Q2
 U 1 1 63C34D03
@@ -1181,12 +973,12 @@ Wire Wire Line
 $Comp
 L Mechanical:MountingHole H3
 U 1 1 63C4C964
-P 7450 6250
-F 0 "H3" H 7550 6296 50  0000 L CNN
-F 1 "MountingHole" H 7550 6205 50  0000 L CNN
-F 2 "MountingHole:MountingHole_3.2mm_M3_Pad" H 7450 6250 50  0001 C CNN
-F 3 "~" H 7450 6250 50  0001 C CNN
-	1    7450 6250
+P 8800 5850
+F 0 "H3" H 8900 5896 50  0000 L CNN
+F 1 "MountingHole" H 8900 5805 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_Pad" H 8800 5850 50  0001 C CNN
+F 3 "~" H 8800 5850 50  0001 C CNN
+	1    8800 5850
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1223,4 +1015,337 @@ Wire Wire Line
 Connection ~ 1650 1200
 Wire Wire Line
 	1650 2000 1650 1900
+Wire Wire Line
+	8400 4350 8400 4550
+$Comp
+L Connector_Generic:Conn_01x02 J1
+U 1 1 63B7CAB7
+P 8200 4650
+F 0 "J1" H 8308 4831 50  0000 C CNN
+F 1 "LiPo (1S/3.7V)" H 8308 4740 50  0000 C CNN
+F 2 "Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical" H 8200 4650 50  0001 C CNN
+F 3 "~" H 8200 4650 50  0001 C CNN
+	1    8200 4650
+	-1   0    0    1   
+$EndComp
+Connection ~ 8400 4650
+Text Notes 7850 3200 0    50   ~ 0
+could be another P-FET, but we \nassume unlimited energy via VBUS
+$Comp
+L Device:R R11
+U 1 1 63EE1AA1
+P 2750 6450
+F 0 "R11" V 2543 6450 50  0000 C CNN
+F 1 "1k" V 2634 6450 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 2680 6450 50  0001 C CNN
+F 3 "~" H 2750 6450 50  0001 C CNN
+F 4 "C21190" H 2750 6450 50  0001 C CNN "LCSC Part"
+F 5 "Basic Part" H 2750 6450 50  0001 C CNN "JLC Part"
+	1    2750 6450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3300 6300 2750 6300
+Connection ~ 3300 6300
+Wire Wire Line
+	3850 6300 3300 6300
+Connection ~ 3850 6300
+Wire Wire Line
+	4050 6300 3850 6300
+$Comp
+L Device:R R12
+U 1 1 63EE87F8
+P 3300 6450
+F 0 "R12" V 3093 6450 50  0000 C CNN
+F 1 "2.2k" V 3184 6450 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 3230 6450 50  0001 C CNN
+F 3 "~" H 3300 6450 50  0001 C CNN
+F 4 "C4190" H 3300 6450 50  0001 C CNN "LCSC Part"
+F 5 "Basic Part" H 3300 6450 50  0001 C CNN "JLC Part"
+	1    3300 6450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R13
+U 1 1 63EE6744
+P 3850 6450
+F 0 "R13" V 3643 6450 50  0000 C CNN
+F 1 "4.7k" V 3734 6450 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 3780 6450 50  0001 C CNN
+F 3 "~" H 3850 6450 50  0001 C CNN
+F 4 "C23162" H 3850 6450 50  0001 C CNN "LCSC Part"
+F 5 "Basic Part" H 3850 6450 50  0001 C CNN "JLC Part"
+	1    3850 6450
+	1    0    0    -1  
+$EndComp
+Connection ~ 4050 7350
+Wire Wire Line
+	4050 7100 4050 7350
+$Comp
+L power:GND #PWR0106
+U 1 1 63EE0EAF
+P 4050 7350
+F 0 "#PWR0106" H 4050 7100 50  0001 C CNN
+F 1 "GND" H 4055 7177 50  0000 C CNN
+F 2 "" H 4050 7350 50  0001 C CNN
+F 3 "" H 4050 7350 50  0001 C CNN
+	1    4050 7350
+	1    0    0    -1  
+$EndComp
+$Comp
+L LCSC:TS-1187A-B-A-B SW3
+U 1 1 63CE19AC
+P 3650 6950
+F 0 "SW3" H 3650 7297 60  0000 C CNN
+F 1 "TS-1187A-B-A-B" H 3650 7191 60  0000 C CNN
+F 2 "lcsc:SW-SMD_4P-L5.1-W5.1-P3.70-LS6.5-TL-2" H 3650 6450 60  0001 C CNN
+F 3 "https://lcsc.com/product-detail/Tactile-Switches_XKB-Enterprise-TS-1187-B-A-A_C318884.html" H 3650 6350 60  0001 C CNN
+F 4 "XKB Connectivity(中国星坤)" H 3650 6950 0   0001 C CNN "Manufacturer"
+F 5 "C318884" H 3650 6950 0   0001 C CNN "LCSC Part"
+F 6 "Basic Part" H 3650 6950 0   0001 C CNN "JLC Part"
+	1    3650 6950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2750 7350 3300 7350
+Wire Wire Line
+	4050 6300 4050 6800
+Wire Wire Line
+	3850 6600 3850 6850
+Wire Wire Line
+	3850 7150 3850 7350
+Connection ~ 3850 7350
+Wire Wire Line
+	3850 7350 4050 7350
+$Comp
+L LCSC:TS-1187A-B-A-B SW2
+U 1 1 63CE8C01
+P 3100 6950
+F 0 "SW2" H 3100 7297 60  0000 C CNN
+F 1 "TS-1187A-B-A-B" H 3100 7191 60  0000 C CNN
+F 2 "lcsc:SW-SMD_4P-L5.1-W5.1-P3.70-LS6.5-TL-2" H 3100 6450 60  0001 C CNN
+F 3 "https://lcsc.com/product-detail/Tactile-Switches_XKB-Enterprise-TS-1187-B-A-A_C318884.html" H 3100 6350 60  0001 C CNN
+F 4 "XKB Connectivity(中国星坤)" H 3100 6950 0   0001 C CNN "Manufacturer"
+F 5 "C318884" H 3100 6950 0   0001 C CNN "LCSC Part"
+F 6 "Basic Part" H 3100 6950 0   0001 C CNN "JLC Part"
+	1    3100 6950
+	1    0    0    -1  
+$EndComp
+$Comp
+L LCSC:TS-1187A-B-A-B SW1
+U 1 1 63CE966E
+P 2550 6950
+F 0 "SW1" H 2550 7297 60  0000 C CNN
+F 1 "TS-1187A-B-A-B" H 2550 7191 60  0000 C CNN
+F 2 "lcsc:SW-SMD_4P-L5.1-W5.1-P3.70-LS6.5-TL-2" H 2550 6450 60  0001 C CNN
+F 3 "https://lcsc.com/product-detail/Tactile-Switches_XKB-Enterprise-TS-1187-B-A-A_C318884.html" H 2550 6350 60  0001 C CNN
+F 4 "XKB Connectivity(中国星坤)" H 2550 6950 0   0001 C CNN "Manufacturer"
+F 5 "C318884" H 2550 6950 0   0001 C CNN "LCSC Part"
+F 6 "Basic Part" H 2550 6950 0   0001 C CNN "JLC Part"
+	1    2550 6950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2750 6600 2750 6850
+Wire Wire Line
+	2750 7150 2750 7350
+Wire Wire Line
+	3300 7150 3300 7350
+Connection ~ 3300 7350
+Wire Wire Line
+	3300 7350 3850 7350
+Wire Wire Line
+	3300 6850 3300 6600
+$Comp
+L LCSC:SPEF110100 SW0
+U 1 1 63D0F743
+P 9700 2250
+F 0 "SW0" H 9700 2547 60  0000 C CNN
+F 1 "SPEF110100" H 9700 2441 60  0000 C CNN
+F 2 "lcsc:SW-TH_SPEF110100" H 9700 1550 60  0001 C CNN
+F 3 "https://lcsc.com/product-detail/Electrical-Switches_ALPS_SPEF110100_9-4-9-14-6-3N_C115366.html" H 9700 1450 60  0001 C CNN
+F 4 "ALPSALPINE(阿尔卑斯阿尔派)" H 9700 2250 0   0001 C CNN "Manufacturer"
+F 5 "C115366" H 9700 2250 0   0001 C CNN "LCSC Part"
+F 6 "Extended Part" H 9700 2250 0   0001 C CNN "JLC Part"
+	1    9700 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR016
+U 1 1 63D10955
+P 10000 2650
+F 0 "#PWR016" H 10000 2400 50  0001 C CNN
+F 1 "GND" H 10005 2477 50  0000 C CNN
+F 2 "" H 10000 2650 50  0001 C CNN
+F 3 "" H 10000 2650 50  0001 C CNN
+	1    10000 2650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10000 2650 10000 2550
+Connection ~ 10000 2650
+NoConn ~ 10000 2200
+$Comp
+L Graphic:SYM_ESD_Small SYM1
+U 1 1 63D291A0
+P 10850 6900
+F 0 "SYM1" H 10850 7040 50  0001 C CNN
+F 1 "SYM_ESD_Small" H 10850 6775 50  0001 C CNN
+F 2 "Symbol:ESD-Logo_6.6x6mm_SilkScreen" H 10850 6910 50  0001 C CNN
+F 3 "~" H 10850 6910 50  0001 C CNN
+	1    10850 6900
+	1    0    0    -1  
+$EndComp
+$Comp
+L MPC:LOGO L1
+U 1 1 63D47DD3
+P 7600 6850
+F 0 "L1" H 7600 6764 60  0001 C CNN
+F 1 "LOGO" H 7600 6936 60  0001 C CNN
+F 2 "MF custom:mpc_logo_10mm" H 7600 6850 50  0001 C CNN
+F 3 "" H 7600 6850 50  0001 C CNN
+	1    7600 6850
+	1    0    0    -1  
+$EndComp
+$Comp
+L WEEEE:LOGO G1
+U 1 1 63D4EA39
+P 10500 6850
+F 0 "G1" H 10500 6587 60  0001 C CNN
+F 1 "LOGO" H 10500 7113 60  0001 C CNN
+F 2 "Symbol:WEEE-Logo_4.2x6mm_SilkScreen" H 10500 6850 50  0001 C CNN
+F 3 "" H 10500 6850 50  0001 C CNN
+	1    10500 6850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3300 6850 2900 6850
+Connection ~ 3300 6850
+Wire Wire Line
+	2350 6850 2750 6850
+Connection ~ 2750 6850
+Wire Wire Line
+	2350 7150 2750 7150
+Connection ~ 2750 7150
+Wire Wire Line
+	2900 7150 3300 7150
+Connection ~ 3300 7150
+Wire Wire Line
+	3450 7150 3850 7150
+Connection ~ 3850 7150
+Wire Wire Line
+	3450 6850 3850 6850
+Connection ~ 3850 6850
+Text Label 2350 4900 0    50   ~ 0
+CHRG
+$Comp
+L Jumper:SolderJumper_2_Bridged JP2
+U 1 1 63E800BB
+P 950 6850
+F 0 "JP2" V 904 6918 50  0000 L CNN
+F 1 "Cut to disable" V 995 6918 50  0000 L CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm" H 950 6850 50  0001 C CNN
+F 3 "~" H 950 6850 50  0001 C CNN
+	1    950  6850
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	950  7300 950  7450
+$Comp
+L Mechanical:MountingHole H4
+U 1 1 63ED8355
+P 8800 6100
+F 0 "H4" H 8900 6146 50  0000 L CNN
+F 1 "MountingHole" H 8900 6055 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_Pad" H 8800 6100 50  0001 C CNN
+F 3 "~" H 8800 6100 50  0001 C CNN
+	1    8800 6100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J5
+U 1 1 63F1188A
+P 2550 7050
+F 0 "J5" H 2658 7231 50  0000 C CNN
+F 1 "SW1" H 2658 7140 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 2550 7050 50  0001 C CNN
+F 3 "~" H 2550 7050 50  0001 C CNN
+	1    2550 7050
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2750 6950 2750 6850
+Wire Wire Line
+	2750 7050 2750 7150
+$Comp
+L Connector_Generic:Conn_01x02 J6
+U 1 1 63F17D06
+P 3100 7050
+F 0 "J6" H 3208 7231 50  0000 C CNN
+F 1 "SW1" H 3208 7140 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 3100 7050 50  0001 C CNN
+F 3 "~" H 3100 7050 50  0001 C CNN
+	1    3100 7050
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J7
+U 1 1 63F183C0
+P 3650 7050
+F 0 "J7" H 3758 7231 50  0000 C CNN
+F 1 "SW1" H 3758 7140 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 3650 7050 50  0001 C CNN
+F 3 "~" H 3650 7050 50  0001 C CNN
+	1    3650 7050
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3300 6950 3300 6850
+Wire Wire Line
+	3300 7050 3300 7150
+Wire Wire Line
+	3850 7050 3850 7150
+Wire Wire Line
+	3850 6950 3850 6850
+$Comp
+L power:VBUS #PWR0104
+U 1 1 63FC3078
+P 950 6400
+F 0 "#PWR0104" H 950 6250 50  0001 C CNN
+F 1 "VBUS" H 965 6573 50  0000 C CNN
+F 2 "" H 950 6400 50  0001 C CNN
+F 3 "" H 950 6400 50  0001 C CNN
+	1    950  6400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R5
+U 1 1 640610A3
+P 5450 6900
+F 0 "R5" V 5243 6900 50  0000 C CNN
+F 1 "220" V 5334 6900 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 5380 6900 50  0001 C CNN
+F 3 "~" H 5450 6900 50  0001 C CNN
+F 4 "C22962" H 5450 6900 50  0001 C CNN "LCSC Part"
+F 5 "Basic Part" H 5450 6900 50  0001 C CNN "JLC Part"
+	1    5450 6900
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R6
+U 1 1 64074821
+P 5450 7000
+F 0 "R6" V 5243 7000 50  0000 C CNN
+F 1 "220" V 5334 7000 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 5380 7000 50  0001 C CNN
+F 3 "~" H 5450 7000 50  0001 C CNN
+F 4 "C22962" H 5450 7000 50  0001 C CNN "LCSC Part"
+F 5 "Basic Part" H 5450 7000 50  0001 C CNN "JLC Part"
+	1    5450 7000
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5600 7000 5750 7000
+Wire Wire Line
+	5600 6900 5750 6900
 $EndSCHEMATC

@@ -1,4 +1,4 @@
-19555137406345245
+19560158577467904
 Battery
 BatteryHolder_Bulgin_BX0036_1xC
 Bulgin Battery Holder, BX0036, Battery Type C (https://www.bulgin.com/products/pub/media/bulgin/data/Battery_holders.pdf)
@@ -82768,6 +82768,13 @@ SMA_L4.3-W2.6-LS5.2-RD
 2
 2
 lcsc
+SMB_L4.6-W3.6-LS5.3-BI
+
+
+0
+2
+2
+lcsc
 SOIC-8_L4.9-W3.9-P1.27-LS6.0-BL-EP3.3-1
 
 
@@ -82788,6 +82795,20 @@ SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BR
 0
 6
 6
+lcsc
+SW-SMD_4P-L5.1-W5.1-P3.70-LS6.5-TL-2
+
+
+0
+4
+4
+lcsc
+SW-TH_SPEF110100
+
+
+0
+8
+5
 w_capacitors
 CPA_5x11MM
 capacitor pol, axial 5x11mm
