@@ -3,15 +3,7 @@ name: KiCad Exports
 on:
   workflow_dispatch:
   push:
-    paths:
-    - "PCB/**"
-    - ".kibot/**"
-    - "kibot.yml"
   pull_request:
-    paths:
-    - "PCB/**"
-    - ".kibot/**"
-    - "kibot.yml"
 
 permissions:
   contents: read
