@@ -26,9 +26,16 @@ Battery thresholds are conservative, health is more important than maximized cap
 Wall Power input is assumed to be larger than power demand by the load + battery, reduce charging current if that is not the case. This usually means >=500mA, depending on use case. 
 
 ### Battery Level/Charge Detection
-ATtiny85 can read VCC via internal ADC, which makes battery voltage readings easy due to the unregulated output. There is a slight drop from the power path, but it's probably smaller than the ADC variance. 
+ATtiny85 can read VCC via internal ADC, which makes battery voltage readings easy due to the unregulated output.
+There is a slight drop from the power path and other peripherals, but it's probably smaller than the variance of the ADC itself. 
 
 Most chargers also offer a CRG/STAT output, see https://electronics.stackexchange.com/a/624987/217104 on how to read that. 
+
+This can be used to detect 4 states:  
+1. Battery empty
+2. Battery charging
+2. Battery discharging
+2. Battery full
 
 ### Load sharing/Power Path
 The usual solution to charge the battery of a device is to cut off the output, either mechanically with a switch (BAT || SUB) or with a P-FET. This is easy, but is incompatible for UPSs and similar "always-on" use cases.
@@ -40,7 +47,12 @@ Cheap solutions use two diodes, most a P-FET in the battery path, better ones on
 Ideal diodes or PowerMUX would be ideal, but are more expensive. Have a look at [this explanation from TI](https://www.ti.com/lit/an/slvae57b/slvae57b.pdf), especially Figure 8-1/9-3. 
 
 ### Button inputs
-Using 1 input per Pin is easy to program, but wasteful for MCUs with few IOs. Chaining button to an analog input is much more efficient and can support at least 32 buttons per pin at very detectable 32mV increments. Smarter chaining could also permit multiple buttons at once with decades (1K, 2K, 4K, ...). See [this explanation](http://www.ignorantofthings.com/2018/07/the-perfect-multi-button-input-resistor.html) or [this one](https://github.com/bxparks/AceButton/blob/develop/docs/resistor_ladder/README.md). 
+Using 1 input per Pin is easy to program, but wasteful for MCUs with few IOs. Chaining button to an analog input is much more efficient and can support up to 32 buttons per pin at very detectable 32mV increments. Detecting sequential presses is easy, parallel is more difficult. Smarter chaining could also permit multiple buttons at once with decades (1K, 2K, 4K, ...). See [this explanation](http://www.ignorantofthings.com/2018/07/the-perfect-multi-button-input-resistor.html) or [this one](https://github.com/bxparks/AceButton/blob/develop/docs/resistor_ladder/README.md). 
+
+[This simulation](https://www.falstad.com/circuit/circuitjs.html?ctz=CQAgjCAMB0l3BWcMBMcUHYMGZIA4UA2ATmIxAUgpABZsKBTAWjDACgBnEFFG73-nxR48UcCABmAQwA2HBmwButGqOwIUK0WEJU9tKkn0wEbAE7gMhEOs1gr3EWJ5xz4YTY3vRw0VTDwbjx8toKOfrQYrlz21sGWcU7+krLynN5hYB6+YhDScgoAxjZ4IV7YpdwYmnqw8BAwcA117BYVQgLt4LpiuIEA7iV8OlQ0qt16bADmWp6aY2qEEZBsgwtzQxsrg-GhsVurCRtZal7bGfH78edXAvHXh3hUl9kCNx6hTwdcmJr31eFcikCkEAaFfoD-PAVm00BtsHCcs80NEbIjOoikuJ8mlBgjkUIAQ8dmDynDQud8WEusTNqEqRTDhDwZ0zky7nciW9HlR6ZpGXi-gIvg8uCLhc8sXlUgoLF9PpKIjQoukEdS-lLgWlYfCNREXIddD4BIQEHFuYNTdZQkaDoMrKdNFEyjVDs6wg6wucrRt3QKQO74j7RQHIB0+IHNTjZaGXbHIfxAhYfTazQmAoEuMGTWmkdiZY81aFPYyZngi15y-ylmJzp6RiAqxMoG5PfF6z0oa5iiWvG2AbVoc0mlAWm5bTb8Anla5lE3PmqG-oaIZa6PTFmp0Gt1GCwB7bogQh8UaQUjURrwMhWlBGbiH7BsA-YcjHsQr89GOpwa9m2-iflyEfIA) is also somewhat useful if you want to play around with values. 
+Advice: Keep Pullup equal to the smallest resistor and keep their resistances somewhat close together, so that the pressing the largest in parallel to the smallest is still detectable. The internal pullup is fine for one-offs, but varies too much for dependable values, better use an external one. 
+
+Search vor *DAC*, *R-2R* or *resistor ladder* for more references. 
 
 ### Test Points & Extensions
 I would like to use this schematic for as much as possible, so there are a few "generics" that might not be always needed. 
