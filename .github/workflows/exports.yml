@@ -16,20 +16,28 @@ jobs:
     timeout-minutes: 10
     
     steps:
-    - uses: actions/checkout@v3
+    - name: Checkout 🛎️
+      uses: actions/checkout@v3
     
     # https://github.com/INTI-CMNB/KiBot/#usage-of-github-actions
-    - name: render KiCad exports
+    - name: Generate KiCad exports 🔧
       uses: INTI-CMNB/KiBot@v2
       with:
         config: kibot.yaml
+        dir: output
         schema: "PCB/easylight.sch"
         board: "PCB/easylight.kicad_pcb"
-        dir: output
         
-    - name: upload results
+    - name: Upload results 📦
+      if: ${{ always() }}  # I want any output I can get
       uses: actions/upload-artifact@v2
       with:
-        name: output
+        if-no-files-found: warn
+        name: Output
         path: output
-            
+        
+    - name: Release 🚀
+      if: startsWith(github.ref, 'refs/tags/')        
+      uses: softprops/action-gh-release@v1
+      with:
+        files: output/*

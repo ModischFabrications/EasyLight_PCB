@@ -156,17 +156,6 @@ F 4 "C965497" H 1750 4800 50  0001 C CNN "LCSC Part"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:TestPoint TP1
-U 1 1 63BBE28E
-P 2600 4500
-F 0 "TP1" V 2554 4688 50  0000 L CNN
-F 1 "AREF" V 2645 4688 50  0000 L CNN
-F 2 "TestPoint:TestPoint_Pad_D1.5mm" H 2800 4500 50  0001 C CNN
-F 3 "~" H 2800 4500 50  0001 C CNN
-	1    2600 4500
-	0    1    1    0   
-$EndComp
-$Comp
 L power:GND #PWR0117
 U 1 1 63BC0AB6
 P 2500 2000
@@ -190,8 +179,6 @@ F 3 "~" H 7700 6100 50  0001 C CNN
 $EndComp
 Text Label 2350 4800 0    50   ~ 0
 D_switches
-Wire Wire Line
-	2600 4500 2350 4500
 Text Notes 1100 2750 0    50   ~ 0
 Reverse polarity protection: Q2 \nShort circuit protection: F1\nESD protection: D1
 Wire Wire Line

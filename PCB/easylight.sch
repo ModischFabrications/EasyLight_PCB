@@ -5,8 +5,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "EasyLight"
-Date ""
-Rev ""
+Date "2023-01-16"
+Rev "1"
 Comp "MPC"
 Comment1 ""
 Comment2 ""

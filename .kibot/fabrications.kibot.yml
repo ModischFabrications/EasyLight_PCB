@@ -22,9 +22,8 @@ outputs:
 
 # generates bom.csv in gerbers folder
   - name: bom.csv
-    type: kibom
+    type: bom
     dir: gerbers
-    extends: 'octopart.csv'
 
 # zip fabrication files
   - name: 'fabrication.zip'
