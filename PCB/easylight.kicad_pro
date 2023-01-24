@@ -34,7 +34,7 @@
         "other_text_upright": false,
         "pads": {
           "drill": 0.0,
-          "height": 0.5,
+          "height": 0.55,
           "width": 1.0
         },
         "silk_line_width": 0.12,
@@ -337,7 +337,9 @@
   },
   "libraries": {
     "pinned_footprint_libs": [],
-    "pinned_symbol_libs": []
+    "pinned_symbol_libs": [
+      "ModischFabrications"
+    ]
   },
   "meta": {
     "filename": "easylight.kicad_pro",
