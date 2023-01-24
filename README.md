@@ -11,7 +11,7 @@ A simple and reusable PCB that can power and controls lights both from USB and a
 
 Open like regular in KiCad. Look into the docs zip under [Actions/KiCad Exports](https://github.com/ModischFabrications/EasyLight_PCB/actions/workflows/exports.yml) to see renderings. 
 
-This schematic could be soldered manually onto a perfboard, but it's preferrably to order a PCB instead. 
+This schematic could be soldered manually onto a perfboard (if you are crazy), but it's much easier and cheaper to order a PCB instead. 
 
 ## Decisions
 
@@ -124,6 +124,10 @@ APA102/SK9822 are a better version of the WS2812B with 4 instead of 3 wires, whi
 I added support for all types in the pinout regardless, leave Pin 3 empty for other chipsets. 
 
 See [FastLED Chipset reference](https://github.com/FastLED/FastLED/wiki/Chipset-reference) for a few more suggestions or [Qwiic LED Stick](https://cdn.sparkfun.com/assets/b/c/9/c/1/Qwiic_LED_Stick_-_Schematic.pdf) for a great hookup reference. 
+
+Signal lines have series resistors (300..500 Ohm) to match impedances and protect the IC from overcurrent, see [this great guide from Adafruit](https://learn.adafruit.com/adafruit-neopixel-uberguide/best-practices) and [this great image](https://forum.arduino.cc/t/arduino-ws2812b-data-pin-resistor/533031/3). They will prevents shorts from overloading the IO while keeping a low profile in relation to the huge impedance of the LEDs. 
+
+Close to the connector are some huge capacitors as well to stabilize LED voltages, but they are smaller than recommended due to the low number of LEDs and my disregard for (aging) electrolyte capacitors. 
 
 ### AIO Power Management Chip (disqualified)
 IP5306 is a great chip that can do everything at once, including:
