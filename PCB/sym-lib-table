@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name "easylight-rescue")(type "Legacy")(uri "${KIPRJMOD}/easylight-rescue.lib")(options "")(descr ""))
+)

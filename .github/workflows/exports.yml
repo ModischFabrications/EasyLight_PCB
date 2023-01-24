@@ -21,11 +21,11 @@ jobs:
     
     # https://github.com/INTI-CMNB/KiBot/#usage-of-github-actions
     - name: Generate KiCad exports 🔧
-      uses: INTI-CMNB/KiBot@v2
+      uses: INTI-CMNB/KiBot@v2_k6
       with:
         config: kibot.yaml
         dir: output
-        schema: "PCB/easylight.sch"
+        schema: "PCB/easylight.kicad_sch"
         board: "PCB/easylight.kicad_pcb"
         
     - name: Upload results 📦
