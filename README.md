@@ -1,17 +1,17 @@
 # EasyLight_PCB
 
-***WIP!***
+A simple and reusable PCB that can power and controls lights both from USB and an internal battery. This will be integrated into multiple other projects of mine. 
 
-A simple and reusable PCB that can power and controls lights both from USB and an internal battery. This will be integrated into [TODO](https://github.com/ModischFabrications/TODO). The main features are:
+The main features are:
 1. Uninterrupted power supply for lights that can hot-swap between USB power and battery backup
 2. Integrated charging, protection and load sharing/power path selection of a Li-Ion battery
 3. Control of WS2812B, SK6812 and similar digital RGB(W) lights
 4. Easy inputs via external buttons
 5. Slider to turn off the lamp without disconnecting battery charge
 
-Open like regular in KiCad. Look into the docs zip under [Actions/KiCad Exports](https://github.com/ModischFabrications/EasyLight_PCB/actions/workflows/exports.yml) to see renderings. 
+Open like regular in KiCad 6. Look into the docs zip under [Actions/KiCad Exports](https://github.com/ModischFabrications/EasyLight_PCB/actions/workflows/exports.yml) to see renderings, exports and more. 
 
-This schematic could be soldered manually onto a perfboard (if you are crazy), but it's much easier and cheaper to order a PCB instead. 
+It's designed to be mostly assembled by JLC-PCB's SMT Assembly service, which should make replicating everything pretty easy. The final price should be around 50€ for 10 boards, you won't get much cheaper if you order fewer. 
 
 ## Decisions
 

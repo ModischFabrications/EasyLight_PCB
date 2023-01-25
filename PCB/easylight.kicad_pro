@@ -338,6 +338,8 @@
   "libraries": {
     "pinned_footprint_libs": [],
     "pinned_symbol_libs": [
+      "easylight-rescue",
+      "LCSC",
       "ModischFabrications"
     ]
   },
