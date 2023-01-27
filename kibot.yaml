@@ -15,7 +15,7 @@ preflight:
 #    - name: "TITLE"
 #      command: $KIBOT_SCH_NAME
 
-  filters:
+#  filters:
 #    - filter: 'suppress courtyards overlap'
 #      regex: 'Courtyards overlap'
 #      error: 'courtyards_overlap'
