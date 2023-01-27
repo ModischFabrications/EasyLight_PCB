@@ -1,4 +1,4 @@
-name: KiCad Exports
+name: KiCAD Exports
 
 on:
   workflow_dispatch:
@@ -16,11 +16,17 @@ jobs:
     timeout-minutes: 10
     
     steps:
+    - name: Generate artifact name 📋
+      id: generate-name
+      run: |
+        echo "::set-output name=artifact::${{ github.event.repository.name }}_${{ github.ref_name }}_$(git log -1 --format="%as").zip"
+
     - name: Checkout 🛎️
       uses: actions/checkout@v3
     
     # https://github.com/INTI-CMNB/KiBot/#usage-of-github-actions
-    - name: Generate KiCad exports 🔧
+    # https://github.com/nerdyscout/KiCAD-CICD-Template
+    - name: Generate KiCAD exports 🔧
       uses: INTI-CMNB/KiBot@v2_k6
       with:
         config: kibot.yaml
@@ -33,7 +39,7 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         if-no-files-found: error
-        name: ${{ github.event.repository.name }}
+        name: ${{ steps.generate-name.outputs.artifact }}
         path: output/
         
     - name: Release 🚀
