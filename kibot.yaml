@@ -35,7 +35,7 @@ import:
 #  - file: .kibot/plot_oshpark-afterdark.kibot.yml
 #  - file: .kibot/plot_oshpark-purple.kibot.yml
 # - cad
-#  - file: .kibot/boardview.kibot.yml
+  - file: .kibot/boardview.kibot.yml
   - file: .kibot/step.kibot.yml
   - file: .kibot/dxf.kibot.yml
 # - fabrications
