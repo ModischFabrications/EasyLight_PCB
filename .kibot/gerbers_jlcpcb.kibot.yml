@@ -12,7 +12,7 @@ filters:
     comment: "Only parts with JLC code"
     type: generic
     include_only:
-      - column: "LCSC"
+      - column: "LCSC Part"
         regex: '^C\d+'
   - name: fix_rotation
     comment: "Adjust rotation for JLC"
@@ -141,7 +141,7 @@ outputs:
         - field: References
           name: Designator
         - Footprint
-        - field: "LCSC"
+        - field: "LCSC Part"
           name: "LCSC Part #"
       csv:
         hide_pcb_info: true
