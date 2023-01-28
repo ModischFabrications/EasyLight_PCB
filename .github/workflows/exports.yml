@@ -22,7 +22,9 @@ jobs:
     - name: Generate artifact name 📋
       id: generate-name
       run: |
-        echo "name=artifact=${{ github.event.repository.name }}_${{ github.ref_name }}_${{ github.event.head_commit.timestamp }}" >> $GITHUB_OUTPUT
+        timestring=$(git log -1 --format='%as')
+        # timestring=$(echo ${{ github.event.head_commit.timestamp }} | cut -d "T" -f 1)
+        echo "name=artifact=${{ github.event.repository.name }}_${{ github.ref_name }}_$timestring" >> $GITHUB_OUTPUT
 
     # https://github.com/INTI-CMNB/KiBot/#usage-of-github-actions
     # https://github.com/nerdyscout/KiCAD-CICD-Template
