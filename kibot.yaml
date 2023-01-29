@@ -21,26 +21,29 @@ preflight:
 #      error: 'courtyards_overlap'
 
 # https://github.com/nerdyscout/KiCAD-CICD-Template
+# https://github.com/INTI-CMNB/KiBot/#the-outputs-section
 import:
-# - docs
+# --- docs
 #  - file: .kibot/bom_ibom.kibot.yml
 #  - file: .kibot/bom_kicost.kibot.yml
-  - file: .kibot/docs.kibot.yml
+#  - file: .kibot/docs.kibot.yml
 #  - file: .kibot/datasheets.kibot.yml
-# - img
-  - file: .kibot/render.kibot.yml
+# --- img
+#  - file: .kibot/render.kibot.yml
   - file: .kibot/plot.kibot.yml
+  - file: .kibot/plot-svg.kibot.yml
 #  - file: .kibot/plot_jlcpcb-green-enig.kibot.yml
 #  - file: .kibot/plot_jlcpcb-green-hasl.kibot.yml
 #  - file: .kibot/plot_oshpark-afterdark.kibot.yml
 #  - file: .kibot/plot_oshpark-purple.kibot.yml
-# - cad
+# --- cad
   - file: .kibot/boardview.kibot.yml
   - file: .kibot/step.kibot.yml
-  - file: .kibot/dxf.kibot.yml
-# - fabrications
-#  - file: .kibot/bom_octopart.kibot.yml
-  - file: .kibot/gerbers_jlcpcb.kibot.yml
+#  - file: .kibot/dxf.kibot.yml
+# --- fabrications
 #  - file: .kibot/drills.kibot.yml
 #  - file: .kibot/fabrications.kibot.yml
-  
+  - file: .kibot/gerbers_jlcpcb.kibot.yml
+#  - file: .kibot/bom_octopart.kibot.yml
+# --- tests
+  - file: .kibot/tests.kibot.yaml

@@ -1,0 +1,34 @@
+outputs:
+  - name: 'Info'
+    type: diff
+    dir: tests/
+    layers: all
+    options:
+      output: '%f-%i%I%v.%x'
+
+  - name: 'Report'
+    type: report
+    dir: tests/
+
+  - name: 'KiCost'
+    comment: 'https://github.com/INTI-CMNB/KiCost'
+    type: kicost
+    dir: tests/
+    options:
+      currency: EUR
+
+  - name: 'PCB-Print'
+    type: pcb_print
+    dir: tests/
+    options:
+      color_theme: '_builtin_default'
+      format: PNG
+
+  - name: 'Populate - Assembly Instructions'
+    run_by_default: false
+    type: populate
+    dir: tests/
+    options:
+      format: HTML
+
+# qr_lib could be great, but it probably easier done in design

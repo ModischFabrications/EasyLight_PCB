@@ -1,5 +1,5 @@
 outputs:
-  # For more information: https://github.com/INTI-CMNB/KiBoM
+  # https://github.com/INTI-CMNB/KiBot/
   - name: 'kicad 3d view top'
     type: 'render_3d'
     dir: 'img/render'

@@ -19,6 +19,7 @@ jobs:
     - name: Checkout 🛎️
       uses: actions/checkout@v3
 
+    # double quote to support shell parameter expansion
     - name: Generate artifact name 📋
       id: generate-name
       run: |

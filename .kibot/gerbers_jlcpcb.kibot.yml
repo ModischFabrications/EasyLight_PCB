@@ -64,10 +64,10 @@ filters:
       - ["^RP2040-QFN-56", 270]
 
 outputs:
-  - name: gerbers_jlcpcb.gbr
+  - name: JLCPCB_GBR
     comment: Gerbers - JLCPCB
     type: gerber
-    dir: gerbers/jlcpcb
+    dir: gerbers/jlcpcb/PCB/
     options: &gerber_options
       exclude_edge_layer: true
       exclude_pads_from_silkscreen: true
@@ -95,17 +95,17 @@ outputs:
   - name: JLCPCB_drill
     comment: Drill - JLCPCB
     type: excellon
-    dir: gerbers/jlcpcb
+    dir: gerbers/jlcpcb/PCB/
     options:
       pth_and_npth_single_file: false
       pth_id: "PTH"
       npth_id: "NPTH"
       metric_units: false
 
-  - name: 'https://jlcpcb.com/'
+  - name: JLCPCB_CPL
     comment: "Pick and place - JLCPCB"
     type: position
-    dir: gerbers/jlcpcb
+    dir: gerbers/jlcpcb/PCBA/
     options:
       variant: rotated
       output: "%f-%i_cpl.%x"
@@ -130,7 +130,7 @@ outputs:
   - name: JLCPCB_bom
     comment: "BOM - JLCPCB"
     type: bom
-    dir: gerbers/jlcpcb
+    dir: gerbers/jlcpcb/PCBA/
     options:
       output: "%f-%i-%r.%x"
       exclude_filter: only_jlc_parts
@@ -147,3 +147,15 @@ outputs:
         hide_pcb_info: true
         hide_stats_info: true
         quote_all: true
+
+# zip fabrication files
+  - name: Zip results
+    type: compress
+    dir: gerbers/jlcpcb/
+    options:
+      format: ZIP
+      files:
+        - dest: .
+          source: gerbers/jlcpcb/PCB/*
+      output: '%f-%r.%x'
+      move_files: true
