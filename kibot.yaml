@@ -7,6 +7,7 @@ preflight:
 #  ignore_unconnected: false
   run_erc: true
   run_drc: true
+  update_xml: true     # needed for kicost
 #  set_text_variables:
 #    - name: "ISSUE_DATE"
 #      command: git log -1 --format="%as"
