@@ -22,6 +22,7 @@ preflight:
 
 # https://github.com/nerdyscout/KiCAD-CICD-Template
 # https://github.com/INTI-CMNB/KiBot/#the-outputs-section
+# https://github.com/INTI-CMNB/KiBot/tree/master/tests/yaml_samples
 import:
 # --- docs
 #  - file: .kibot/bom_ibom.kibot.yml

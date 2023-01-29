@@ -1,5 +1,4 @@
 outputs:
-  # For more information: https://github.com/INTI-CMNB/KiBoM
   - name: 'schematic.pdf'
     comment: "generate schematic (PDF)"
     type: pdf_sch_print

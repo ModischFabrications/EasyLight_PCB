@@ -1,11 +1,11 @@
 outputs:
-  - name: 'PCB-Print'
-    type: pcb_print
-    dir: tests/
+    # TODO: print as png
+  - name: 'schematic.pdf'
+    comment: "generate schematic (pdf)"
+    type: pdf_sch_print
+    dir: .
     options:
-      output: '%f-%i%I%v.%x'
-      color_theme: '_builtin_default'
-      format: PNG
+      output: '%f-%i.%x'
 
   - name: 'board_top.png'
     comment: 'https://github.com/yaqwsx/PcbDraw'
