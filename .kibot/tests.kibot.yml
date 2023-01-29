@@ -1,6 +1,7 @@
 outputs:
   - name: 'KiCost'
     comment: 'https://github.com/INTI-CMNB/KiCost'
+    run_by_default: true      # useless for LCSC part numbers
     type: kicost
     dir: tests/
     options:
@@ -10,6 +11,6 @@ outputs:
     type: populate
     dir: tests/
     options:
-      format: HTML
+      format: 'html'    # or 'md'
 
 # qr_lib could be great, but it probably easier done in design
