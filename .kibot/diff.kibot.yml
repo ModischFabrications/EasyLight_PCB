@@ -3,7 +3,7 @@
 outputs:
   - name: 'Diff schematic'
     type: diff
-    dir: difff/
+    dir: diff/
     options:
       pcb: false
       cache_dir: .cache

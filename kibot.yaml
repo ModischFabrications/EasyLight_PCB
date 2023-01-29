@@ -49,4 +49,4 @@ import:
   - file: .kibot/gerbers_jlcpcb.kibot.yml
 #  - file: .kibot/bom_octopart.kibot.yml
 # --- tests
-#  - file: .kibot/tests.kibot.yml
+  - file: .kibot/tests.kibot.yml

@@ -1,8 +1,10 @@
 outputs:
-  - name: 'Info'
-    type: info
-    dir: ./
+# mostly installation facts
+#  - name: 'Info'
+#    type: info
+#    dir: ./
 
   - name: 'Report'
+    comment: 'Facts about the PCB'
     type: report
     dir: ./
