@@ -24,9 +24,9 @@ jobs:
       run: |
         timestring=$(git log -1 --format='%as')
         # timestring=$(echo ${{ github.event.head_commit.timestamp }} | cut -d "T" -f 1)
-        artifactname='${{ github.event.repository.name }}_${{ github.ref_name }}_${timestring}'
-        echo '${artifactname}'
-        echo 'artifact=${artifactname}' >> $GITHUB_OUTPUT
+        artifactname="${{ github.event.repository.name }}_${{ github.ref_name }}_${timestring}"
+        echo "Output name: ${artifactname}"
+        echo "artifact=${artifactname}" >> $GITHUB_OUTPUT
 
     # https://github.com/INTI-CMNB/KiBot/#usage-of-github-actions
     # https://github.com/nerdyscout/KiCAD-CICD-Template
