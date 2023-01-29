@@ -16,7 +16,7 @@ outputs:
       placeholder: false
       remap:
       show_components: none
-      style: '/usr/share/pcbdraw/styles/set-black-cu.json'
+      style: '/usr/share/pcbdraw/styles/set-blue-cu.json'
       variant: ''
       vcuts: false
       warnings: 'none'
@@ -38,7 +38,7 @@ outputs:
       placeholder: false
       remap:
       show_components: none
-      style: '/usr/share/pcbdraw/styles/set-black-cu.json'
+      style: '/usr/share/pcbdraw/styles/set-blue-cu.json'
       variant: ''
       vcuts: false
       warnings: 'none'
