@@ -1,25 +1,12 @@
 outputs:
-  - name: 'Info'
-    type: diff
-    dir: tests/
-    layers: all
-    options:
-      output: '%f-%i%I%v.%x'
-
-  - name: 'Report'
-    type: report
-    dir: tests/
-
   - name: 'KiCost'
     comment: 'https://github.com/INTI-CMNB/KiCost'
-    run_by_default: false
     type: kicost
     dir: tests/
     options:
       currency: EUR
 
   - name: 'Populate - Assembly Instructions'
-    run_by_default: false
     type: populate
     dir: tests/
     options:

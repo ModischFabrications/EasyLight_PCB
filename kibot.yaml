@@ -24,6 +24,8 @@ preflight:
 # https://github.com/INTI-CMNB/KiBot/#the-outputs-section
 # https://github.com/INTI-CMNB/KiBot/tree/master/tests/yaml_samples
 import:
+  - file: .kibot/info.kibot.yml
+  - file: .kibot/diff.kibot.yml
 # --- docs
 #  - file: .kibot/bom_ibom.kibot.yml
 #  - file: .kibot/bom_kicost.kibot.yml
@@ -47,4 +49,4 @@ import:
   - file: .kibot/gerbers_jlcpcb.kibot.yml
 #  - file: .kibot/bom_octopart.kibot.yml
 # --- tests
-  - file: .kibot/tests.kibot.yml
+#  - file: .kibot/tests.kibot.yml
