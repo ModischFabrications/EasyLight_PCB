@@ -1,0 +1,8 @@
+outputs:
+  - name: 'Info'
+    type: info
+    dir: ./
+
+  - name: 'Report'
+    type: report
+    dir: ./

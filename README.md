@@ -13,7 +13,7 @@ Open like regular in KiCad 6. Look into the exports under [Actions/KiCad Exports
 
 It's designed to be mostly assembled by JLC-PCB's SMT Assembly service, which should make replicating everything pretty easy. The final price should be around 50€ for 10 boards, you won't get much cheaper if you order fewer. Feel free to deselect parts you don't need from PCBA, connectors are a good choice. 
 
-This project took around 40 hours of work to finish, from part research to finished PCB- 
+This project took around 40 hours of work to finish, from part research to finished PCB. Take some time to work through all of it if you want to replicate anything, it's not for the faint-hearted.
 
 ## Decisions
 

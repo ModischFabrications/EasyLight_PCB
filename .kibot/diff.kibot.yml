@@ -1,0 +1,17 @@
+# TODO filter for pcb changes
+
+outputs:
+  - name: 'Diff schematic'
+    type: diff
+    dir: difff/
+    options:
+      pcb: false
+      cache_dir: .cache
+
+  - name: 'Diff PCB'
+    type: diff
+    dir: diff/
+    layers: ['F.Cu', 'B.Cu', 'F.SilkS', 'B.SilkS', 'F.Fab', 'B.Fab', 'F.Mask', 'B.Mask', 'Edge.Cuts']
+    options:
+      pcb: true
+      cache_dir: .cache
