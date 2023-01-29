@@ -1,16 +1,28 @@
 outputs:
   - name: 'KiCost'
     comment: 'https://github.com/INTI-CMNB/KiCost'
-    run_by_default: true      # useless for LCSC part numbers
+    run_by_default: false      # useless for LCSC part numbers
     type: kicost
     dir: tests/
     options:
       currency: EUR
 
+  # https://github.com/INTI-CMNB/KiBot/blob/master/docs/populate.md
+  # https://github.com/INTI-CMNB/KiBot/blob/master/tests/data/plain_html.md
   - name: 'Populate - Assembly Instructions'
+    run_by_default: false      # too complex for now
     type: populate
     dir: tests/
     options:
-      format: 'html'    # or 'md'
+      format: 'html'    # or 'md' for gh-pages
+      renderer: Populate_Renderer
+      input: tests/data/plain_html.md
+
+  - name: Populate_Renderer
+    comment: "internal use only"
+    type: pcbdraw
+    run_by_default: false
+    options:
+      format: png
 
 # qr_lib could be great, but it probably easier done in design
