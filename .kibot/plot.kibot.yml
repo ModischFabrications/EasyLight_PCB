@@ -1,4 +1,12 @@
 outputs:
+  - name: 'PCB-Print'
+    type: pcb_print
+    dir: tests/
+    options:
+      output: '%f-%i%I%v.%x'
+      color_theme: '_builtin_default'
+      format: PNG
+
   - name: 'board_top.png'
     comment: 'https://github.com/yaqwsx/PcbDraw'
     type: 'pcbdraw'

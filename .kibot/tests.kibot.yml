@@ -17,13 +17,6 @@ outputs:
     options:
       currency: EUR
 
-  - name: 'PCB-Print'
-    type: pcb_print
-    dir: tests/
-    options:
-      color_theme: '_builtin_default'
-      format: PNG
-
   - name: 'Populate - Assembly Instructions'
     run_by_default: false
     type: populate
