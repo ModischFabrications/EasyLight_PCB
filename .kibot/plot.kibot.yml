@@ -1,5 +1,5 @@
 outputs:
-    # TODO: print as png
+    # TODO: print as png?
   - name: 'schematic.pdf'
     comment: "generate schematic (pdf)"
     type: pdf_sch_print

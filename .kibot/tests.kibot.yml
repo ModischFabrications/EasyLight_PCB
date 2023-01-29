@@ -12,6 +12,7 @@ outputs:
 
   - name: 'KiCost'
     comment: 'https://github.com/INTI-CMNB/KiCost'
+    run_by_default: false
     type: kicost
     dir: tests/
     options:

@@ -6,7 +6,7 @@ outputs:
     options:
       output: '%f-%i.%x' #[string='%f-%i%v.%x'] filename for the output SVG (%i=schematic %x=svg). Affected by global options.
 
-  - name: 'board_black_top.svg'
+  - name: 'board_top.svg'
     comment: 'https://github.com/yaqwsx/PcbDraw'
     type: 'pcbdraw'
     dir: svg
@@ -47,7 +47,7 @@ outputs:
       # [string='visible'] [visible,all,none] using visible only the warnings about components in the visible side are generated
       warnings: 'none'
 
-  - name: 'board_black_bottom.svg'
+  - name: 'board_bottom.svg'
     comment: 'https://github.com/yaqwsx/PcbDraw'
     type: 'pcbdraw'
     dir: svg
