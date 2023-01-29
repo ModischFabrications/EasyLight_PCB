@@ -56,6 +56,8 @@ Advice: Keep Pullup equal to the smallest resistor and keep their resistances so
 
 Search vor *DAC*, *R-2R* or *resistor ladder* for more references. 
 
+3 Buttons are integrated into the PCB by default, but there are more possibilities by soldering wires into the empty connector next to the buttons to use external ones. 
+
 ### Test Points & Extensions
 I would like to use this schematic for as much as possible, so there are a few "generics" that might not be always needed. 
 
@@ -77,7 +79,7 @@ Side note: Disposable vapes are a cancer to the environment, but have "free" LiP
 Short-circuit-resistance of the power leads is archieved using a polyfuse. 
 Battery safety is handled by a dedicated chip on the PCB (there is an additional one in most batteries). 
 
-Input ESD & Overvoltage should be handled by the TVS diode. 
+Input ESD & Overvoltage should be handled by the TVS diode. A bidirectional one was chosen to enable the polarity protection later without the TVS interfering. 
 
 Reverse Polarity protection via P-FET according to [this great video](https://www.youtube.com/watch?v=IrB-FPcv1Dc&t=184s).
 
