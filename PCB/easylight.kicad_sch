@@ -6,8 +6,8 @@
 
   (title_block
     (title "EasyLight")
-    (date "2023-01-29")
-    (rev "1.0")
+    (date "2023-02-03")
+    (rev "1.1")
     (company "MPC")
   )
 
@@ -5121,7 +5121,7 @@
     (property "Value" "AVR-ISP" (id 1) (at 142.7734 124.333 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical" (id 2) (at 144.78 123.19 90)
+    (property "Footprint" "ModischFabrications:3x2 CopperPad 2.54mm" (id 2) (at 144.78 123.19 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" " ~" (id 3) (at 118.745 138.43 0)
@@ -5635,7 +5635,7 @@
       (reference "J3") (unit 1) (value "LEDs") (footprint "Connector_JST:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical")
     )
     (path "/00000000-0000-0000-0000-000063f240fe"
-      (reference "J4") (unit 1) (value "AVR-ISP") (footprint "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical")
+      (reference "J4") (unit 1) (value "AVR-ISP") (footprint "ModischFabrications:3x2 CopperPad 2.54mm")
     )
     (path "/7077f794-b698-44e0-8cf7-3d3000ab4c20"
       (reference "J8") (unit 1) (value "SW4+") (footprint "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical")

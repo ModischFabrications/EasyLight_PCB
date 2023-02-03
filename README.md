@@ -17,6 +17,38 @@ This project took around 40 hours of work to finish, from part research to finis
 
 ## Decisions
 
+### Programming & Debugging
+It's not easy to program microcontrollers without a huge markup in size and/or cost. 
+
+The easiest solution is to have a socket on the PCB to program the IC externally and plug it in afterwards. There are no electrical problems with the board itself, it's easy to exchange once killed and you can use basic components. 
+There are problems though:
+- Stacking PCB - Socket - IC takes at least 10mm in height
+- Additional socket to place
+- Only THT DIP chips supported
+
+The default option for better boards is to use an "In System Programmer", or ISP in short, that connects directly to the chip. There are some considerations on connected IO, especially on pins usually meant as an input, but it's independent of the actual location and package of the IC. Do note that they can be connected in reverse, which will usually kill everything on your board. 
+
+The traditional AVR-ISP is a 6 pin connector with 2.54mm pitch on the board. This is compatible to generic hookup wires used for every arduino ever made, but needs a bit of space because of the large pitch and THT parts. 
+
+It's possible to use finer connectors with a bit more features, e.g. JST-SH-6, but that will lock you out of the generic programmers and poses additional costs. It will however make programming more reliable and enjoyable.
+
+More elegant solutions depend on "pogo pins" and exposed copper test pads. It's compact and doesn't need any additional parts on the board, but has it's problems with alignment. Hint: Don't try to hold solid pins onto these pads and expect programming to work, you need a bit of spring tension to keep 2x3 pins connected. Pogo pins with large cone heads can actually be used on plated holes meant to solder in AVR-ISPs as well, but are more difficult to find. Another trick is to use vias in the pads itself to align everything, but make sure not to tent/plate them. Make sure to pierce contaminants for boards with cheap plating. 
+
+There is some [great research](http://www.auelectronics.com/forum/index.php?topic=42.0) on these, especially on the [tips used](https://electronics.stackexchange.com/questions/360050/implementing-a-good-connection-for-pogo-pins-in-eagle), [and plating](https://electronics.stackexchange.com/questions/393531/what-pcb-plating-do-i-need-to-use-exposed-copper-pads-with-pogo-pins). Some even [sell premade ones](https://www.tindie.com/products/madworm/tiny-avr-isp-pogo-pin-programming-adapter/), take a look at them for inspiration. 
+
+See [Tag-Connect](https://www.tag-connect.com/) for a commercial solution that's solid and prevents reverse connections. It [seems to have some problems](https://ludzinc.blogspot.com/2013/03/missed-it-by-that-much.html) though and is a very fine 1.27mm pitch. If you buy one, take the solution without mounting holes, the other one is huge.
+
+TLDR: 
+- Use the right pogo:
+  - cone (1.4mm) for plated holes/vias, can use pads
+  - crown for pads with solder
+  - round for gold plated pads with repeated contacts
+- use pads with 1.27 or 2.54mm pitch
+- add via/plated hole to pad to make alignment easier
+- use gold plating or apply solder to pads that will be contacted often
+- add alignment hole if you feel fancy
+-> generic 2.54mm THT pin header holes (ID=1mm, OD=1.7mm) are fine
+
 ### Power planning
 These boards are planned for two use cases:
 1. Docked: Permanent wall power with battery as backup for short durations
