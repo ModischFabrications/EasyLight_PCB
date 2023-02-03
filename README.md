@@ -9,7 +9,7 @@ The main features are:
 4. Easy inputs via external buttons
 5. Slider to turn off the lamp without disconnecting battery charge
 
-Open like regular in KiCad 6. Look into the exports under [Actions/KiCad Exports](https://github.com/ModischFabrications/EasyLight_PCB/actions/workflows/exports.yml) to see schematics, renderings, exports and more. 
+Open like regular in KiCad 6. Look into the exports under [Actions/KiCad Exports](https://github.com/ModischFabrications/EasyLight_PCB/actions/workflows/kicad-exports.yml) to see schematics, renderings, exports and more. 
 
 It's designed to be mostly assembled by JLC-PCB's SMT Assembly service, which should make replicating everything pretty easy. The final price should be around 50€ for 10 boards with all parts included, you won't get much cheaper if you assemble yourself. Ordering fewer boards is rarely economical: 5 boards cost 42€, because the a part of the cost is "extended part" reel switching for 3$ each. Feel free to deselect parts you don't need from PCBA, connectors are a good choice. You might get away ordering fewer if you heavily reuse very few components or limit yourself to basic parts. 
 
