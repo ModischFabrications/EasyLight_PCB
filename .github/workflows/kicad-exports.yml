@@ -76,5 +76,4 @@ jobs:
       with:
         generate_release_notes: true
         fail_on_unmatched_files: true
-        files: | 
-          */*.zip
+        files: ${{ needs.build.outputs.artifact }}.zip
