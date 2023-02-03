@@ -8,18 +8,6 @@ preflight:
   run_erc: true
   run_drc: true
   update_xml: true     # needed for kicost
-#  set_text_variables:
-#    - name: "ISSUE_DATE"
-#      command: git log -1 --format="%as"
-#    - name: "REVISION"
-#      command: git describe --exact-match --tags 2> /dev/null || git rev-parse --short HEAD
-#    - name: "TITLE"
-#      command: $KIBOT_SCH_NAME
-
-#  filters:
-#    - filter: 'suppress courtyards overlap'
-#      regex: 'Courtyards overlap'
-#      error: 'courtyards_overlap'
 
 # https://github.com/nerdyscout/KiCAD-CICD-Template
 # https://github.com/INTI-CMNB/KiBot/#the-outputs-section
@@ -30,16 +18,13 @@ import:
 # --- docs
 #  - file: .kibot/bom_ibom.kibot.yml
 #  - file: .kibot/bom_kicost.kibot.yml
+#  - file: .kibot/bom_octopart.kibot.yml
 #  - file: .kibot/docs.kibot.yml
 #  - file: .kibot/datasheets.kibot.yml
 # --- img
 #  - file: .kibot/render.kibot.yml
   - file: .kibot/plot.kibot.yml
   - file: .kibot/plot-svg.kibot.yml
-#  - file: .kibot/plot_jlcpcb-green-enig.kibot.yml
-#  - file: .kibot/plot_jlcpcb-green-hasl.kibot.yml
-#  - file: .kibot/plot_oshpark-afterdark.kibot.yml
-#  - file: .kibot/plot_oshpark-purple.kibot.yml
 # --- cad
   - file: .kibot/boardview.kibot.yml
   - file: .kibot/step.kibot.yml
@@ -48,6 +33,5 @@ import:
 #  - file: .kibot/drills.kibot.yml
 #  - file: .kibot/fabrications.kibot.yml
   - file: .kibot/gerbers_jlcpcb.kibot.yml
-#  - file: .kibot/bom_octopart.kibot.yml
 # --- tests
   - file: .kibot/tests.kibot.yml
