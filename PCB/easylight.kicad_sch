@@ -4000,7 +4000,7 @@
     (property "Value" "XB8089D0" (id 1) (at 259.08 103.3526 0)
       (effects (font (size 1.524 1.524)))
     )
-    (property "Footprint" "LCSC:SOIC-8_L4.9-W3.9-P1.27-LS6.0-BL-EP3.3-1" (id 2) (at 259.08 100.33 0)
+    (property "Footprint" "Package_SO:SOIC-8-1EP_3.9x4.9mm_P1.27mm_EP2.514x3.2mm" (id 2) (at 259.08 100.33 0)
       (effects (font (size 1.524 1.524)) hide)
     )
     (property "Datasheet" "https://www.lcsc.com/product-detail/Battery-Management-ICs_XySemi-XB8089D0_C2760005.html" (id 3) (at 259.08 113.03 0)
@@ -5734,7 +5734,7 @@
       (reference "U2") (unit 1) (value "BQ21040DBVR") (footprint "LCSC:SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BR")
     )
     (path "/00000000-0000-0000-0000-000063be38c8"
-      (reference "U3") (unit 1) (value "XB8089D0") (footprint "LCSC:SOIC-8_L4.9-W3.9-P1.27-LS6.0-BL-EP3.3-1")
+      (reference "U3") (unit 1) (value "XB8089D0") (footprint "Package_SO:SOIC-8-1EP_3.9x4.9mm_P1.27mm_EP2.514x3.2mm")
     )
   )
 )

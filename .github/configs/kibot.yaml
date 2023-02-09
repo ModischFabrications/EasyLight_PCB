@@ -7,14 +7,16 @@ preflight:
 #  ignore_unconnected: false
   run_erc: true
   run_drc: true
-  update_xml: true     # needed for kicost
+#  update_xml: true     # needed for kicost
 
 global:
   filters:
     - number: 9
-      regex: 'EnvironmentVariables'
+      regex: 'KiCad config without environment.vars section'
     - number: 58
       regex:  "The current configuration does not include the library 'LCSC'"
+    - number: 58
+      regex:  "The current configuration does not include the library 'ModischFabrications'"
 
 # https://github.com/nerdyscout/KiCAD-CICD-Template
 # https://github.com/INTI-CMNB/KiBot/#the-outputs-section
