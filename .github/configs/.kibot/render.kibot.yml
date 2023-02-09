@@ -17,3 +17,5 @@ outputs:
       output: '%f-bottom.%x'
       ray_tracing: false
       view: bottom
+
+# might want to use the newer blender renderer when released: https://github.com/INTI-CMNB/KiBot/issues/380#issuecomment-1412012094

@@ -119,9 +119,9 @@ Reverse Polarity protection via P-FET according to [this great video](https://ww
 ## Part Selection
 Everything is optimized for JLCPCB, because they are great for (cheap) hobby projects. 
 [JLCPCB Search](https://jlcpcb.com/parts/) was used for simple part lookup, usually with "basic parts".
-[LCSC Search](https://www.lcsc.com/) should show the same parts from the same databse, but doesn't add much. 
+[LCSC Search](https://www.lcsc.com/) should show the same parts from the same database, but doesn't add much. 
 [JLCParts](https://yaqwsx.github.io/jlcparts/#/) was used to find more complex parts. 
-[easyeda2kicad](https://github.com/uPesy/easyeda2kicad.py) to import parts into KiCAD. 
+[easyeda2kicad](https://github.com/uPesy/easyeda2kicad.py) to import parts into KiCAD. You should use generic footprints & symbols for simple parts instead. 
 
 Basic parts are given preference, because they are cheaper for assembly service. 
 
@@ -130,11 +130,11 @@ Footprints:
 - QFN are pain, BGA impossible
 - SOT-23-5, SOP-8, SMA and similar are good choices
 - 0603 or bigger
--> Soldering by hand needs to be possible, even if reflow is easier
+-> Soldering by hand should be possible, even if reflow is easier
 
 Generic resistors and capacitors use the [E6 series](https://en.wikipedia.org/wiki/E_series_of_preferred_numbers) for best compatibility.
 
-Some footprints use minor variations (e.g. 1206 LED) that I already have, sorry for that. 
+Some footprints might use minor variations for parts that I already have, sorry for that. 
 Others are based on availability and consistency, e.g. 22uF caps are the largest capacity I could get as a cheap basic part in 0603. 
 
 ### Microcontroller

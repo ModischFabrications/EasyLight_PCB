@@ -9,6 +9,10 @@ preflight:
   run_drc: true
   update_xml: true     # needed for kicost
 
+filters:
+  - number: 'W058'
+    regex:  "The current configuration does not include the library 'LCSC'"
+
 # https://github.com/nerdyscout/KiCAD-CICD-Template
 # https://github.com/INTI-CMNB/KiBot/#the-outputs-section
 # https://github.com/INTI-CMNB/KiBot/tree/master/tests/yaml_samples
