@@ -1,5 +1,8 @@
 # This KiBot script generates gerbers, drill, bom, and position files for submitting
 # two layer boards to JLCPCB.
+
+# might want to replace with JLC template: https://github.com/INTI-CMNB/KiBot#filtering-kibot-warnings:~:text=JLCPCB%3A%20contain%20fabrication%20outputs%20compatible%20with%20JLC%20PCB
+
 variants:
   - name: rotated
     comment: "Just a place holder for the rotation filter"

@@ -13,7 +13,7 @@ global:
   filters:
     - number: 9
       regex: 'EnvironmentVariables'
-    - number: 'W058'
+    - number: 58
       regex:  "The current configuration does not include the library 'LCSC'"
 
 # https://github.com/nerdyscout/KiCAD-CICD-Template
