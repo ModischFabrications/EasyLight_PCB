@@ -1,19 +1,26 @@
 # EasyLight_PCB
 
-A simple and reusable PCB that can power and controls lights both from USB and an internal battery. This will be integrated into multiple other projects of mine. 
+A simple and reusable PCB that can power and control lights both from USB and an internal battery. This will be integrated into multiple other projects of mine. 
 
 The main features are:
-1. Uninterrupted power supply for lights that can hot-swap between USB power and battery backup
+1. Uninterrupted power supply for light installations that can hot-swap between USB power and battery backup
 2. Integrated charging, protection and load sharing/power path selection of a Li-Ion battery
 3. Control of WS2812B, SK6812 and similar digital RGB(W) lights
-4. Easy inputs via external buttons
-5. Slider to turn off the lamp without disconnecting battery charge
+4. 3 integrated pushbuttons for simple controls
+5. Extendable inputs via external buttons
+6. Toggle Button to turn off the lamp logic without disconnecting battery charger
 
-Open like regular in KiCad 6. Look into the exports under [Actions/KiCad Exports](https://github.com/ModischFabrications/EasyLight_PCB/actions/workflows/kicad-exports.yml) to see schematics, renderings, exports and more. 
+Open like regular in KiCad 6. Look into the exports under [Actions/KiCad Exports](https://github.com/ModischFabrications/EasyLight_PCB/actions/workflows/kicad-exports.yml) to see schematics, renderings, exports and more. You will get a few warnings about missing libraries (LCSC and my logos), relink or ignore them. 
 
-It's designed to be mostly assembled by JLC-PCB's SMT Assembly service, which should make replicating everything pretty easy. The final price should be around 50€ for 10 boards with all parts included, you won't get much cheaper if you assemble yourself. Ordering fewer boards is rarely economical: 5 boards cost 42€, because the a part of the cost is "extended part" reel switching for 3$ each. Feel free to deselect parts you don't need from PCBA, connectors are a good choice. You might get away ordering fewer if you heavily reuse very few components or limit yourself to basic parts. 
+This project took around 50 hours of work to finish, from part research to finished PCB(A). Take some time to work through all of it if you want to replicate anything, it's not for the faint-hearted. Do feel invited to donate if you found this useful.
 
-This project took around 40 hours of work to finish, from part research to finished PCB. Take some time to work through all of it if you want to replicate anything, it's not for the faint-hearted.
+## Fabrication
+It's designed to be mostly assembled by JLC-PCB's SMT Assembly service, which should make replicating everything pretty easy. The final price should be around 50€ for 10 boards with almost all parts included, you won't get much cheaper if you assemble yourself. Check for coupons prior to ordering, there are usually 6..9€ discounts somewhere. I do recommend you invest +1€ for checkups of all files and +1€ for leadfree solder (yes, lead is *that* bad).
+
+Ordering fewer boards is rarely economical: 5 boards cost 42€, because a large part of the cost is "extended part" reel switching for 3$ each and the additional attrition (junked parts). THT parts also incur a flat 3€ "hand soldering" surcharge, you might want to skip them completely.
+You might get away ordering fewer if you heavily reuse very few components or limit yourself to basic parts. Paneling could also reduce costs, but you need a large number of small PCBs to make it worthwhile. Panel yourself instead of using their service to save additional 4€.
+
+-> Feel free to deselect parts you don't need from PCBA, connectors or the overpriced ATtiny85 are a good choice. 
 
 ## Decisions
 
